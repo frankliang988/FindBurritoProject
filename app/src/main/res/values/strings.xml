@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FindBurritoProject</string>
+
+    <string name="trans_info" translatable="false">trans_info%d</string>
+    <string name="trans_address" translatable="false">trans_address%d</string>
+    <string name="trans_container" translatable="false">trans_container%d</string>
+
+    <string name="title_burrito_places">Burrito Places</string>
+    <string name="restaurant_info">%1$s • %2$s</string>
+    <string name="open_settings">Open Settings</string>
+
+    <string name="warning_location_permission_required">Location permission is required to use this app</string>
+    <string name="warning_no_network">It appears there is no network connection. Please try again later</string>
+    <string name="warning_no_google_play_service">It appears there is no network connection. Please try again later</string>
+
+</resources>

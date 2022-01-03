@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/restaurantListFragment">
+
+    <fragment
+        android:id="@+id/restaurantListFragment"
+        android:name="com.frankliang.findburritoproject.ui.fragments.RestaurantListFragment"
+        android:label="RestaurantListFragment" >
+
+        <argument
+            android:name="restaurant"
+            app:argType="com.frankliang.findburritoproject.model.Restaurant" />
+        <action
+            android:id="@+id/action_restaurantListFragment_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantDetailFragment"
+        android:name="com.frankliang.findburritoproject.ui.fragments.RestaurantDetailFragment"
+        android:label="RestaurantDetailFragment" />
+</navigation>
