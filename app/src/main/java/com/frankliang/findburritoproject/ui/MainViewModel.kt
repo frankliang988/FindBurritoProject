@@ -72,7 +72,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private suspend fun queryDataFromYelp(page: Int) {
-        this.coordinate?: return
+        if(this.coordinate == null) {
+            isLoadingData = false
+            return
+        }
         try {
             val result = NetworkRepository.findRestaurants(coordinate!!, page)
             result.data?.let {data ->
@@ -90,6 +93,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             setIsNetworkError(true)
         }
         setShowProgressBar(false)
+        isLoadingData = false
     }
 
     private suspend fun setShowProgressBar(isLoading: Boolean) {
